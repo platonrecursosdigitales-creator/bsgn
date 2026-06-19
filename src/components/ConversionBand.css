@@ -1,0 +1,49 @@
+.conversion-band {
+  background-color: var(--color-light-blue);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.conversion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.conversion-text {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+  max-width: 800px;
+}
+
+.conversion-actions {
+  display: flex;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .conversion-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .conversion-text {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .conversion-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .conversion-actions .btn {
+    width: 100%;
+  }
+}

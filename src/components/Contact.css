@@ -1,0 +1,138 @@
+.contact-section {
+  background-color: var(--color-gray-light);
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.contact-info {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 50px 40px;
+}
+
+.contact-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.contact-desc {
+  color: rgba(250, 249, 250, 0.8);
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.contact-details strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-details span {
+  color: rgba(250, 249, 250, 0.8);
+  font-weight: 300;
+}
+
+.contact-details a {
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--color-accent);
+}
+
+.contact-form-wrapper {
+  padding: 50px 40px 50px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: var(--color-gray-light);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 3px rgba(237, 26, 142, 0.1);
+}
+
+.form-submit {
+  align-self: flex-start;
+  padding: 15px 40px;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .contact-form-wrapper {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .form-submit {
+    align-self: stretch;
+  }
+}
