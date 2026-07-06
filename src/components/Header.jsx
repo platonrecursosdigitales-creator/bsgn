@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import bsgnLogo from '../assets/bsgnlogo.png';
+import bsgnLogo from '../assets/bsgnlogo.webp';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

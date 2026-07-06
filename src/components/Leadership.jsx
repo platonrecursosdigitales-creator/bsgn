@@ -1,6 +1,6 @@
 import React from 'react';
 import './Leadership.css';
-import dyrseImage from '../assets/dyrse.png';
+import dyrseImage from '../assets/dyrse.webp';
 
 const Leadership = () => {
   return (

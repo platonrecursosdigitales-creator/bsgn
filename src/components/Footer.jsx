@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import bsgnLogo from '../assets/bsgnlogo.png';
+import bsgnLogo from '../assets/bsgnlogo.webp';
 
 const Footer = () => {
   return (
