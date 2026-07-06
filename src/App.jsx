@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Metrics from './components/Metrics';
 import ConversionBand from './components/ConversionBand';
 import About from './components/About';
-import Services from './components/Services';
+import StrategicAreas from './components/StrategicAreas';
 import Leadership from './components/Leadership';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,7 +18,7 @@ function App() {
         <Metrics />
         <ConversionBand />
         <About />
-        <Services />
+        <StrategicAreas />
         <Leadership />
         <Contact />
       </main>

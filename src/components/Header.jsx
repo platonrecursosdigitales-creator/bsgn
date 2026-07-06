@@ -28,7 +28,7 @@ const Header = () => {
           <ul>
             <li><a href="#inicio" onClick={() => setMobileMenuOpen(false)}>Inicio</a></li>
             <li>
-              <a href="#servicios" onClick={() => setMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <a href="#areas" onClick={() => setMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                 Servicios <ChevronDown size={16} />
               </a>
             </li>
