@@ -21,7 +21,7 @@ const Services = () => {
     { id: 5, title: 'Startups - Emprende tu negocio', icon: <Rocket size={36} /> },
     { id: 6, title: 'High-End Events & Experiences', icon: <Star size={36} /> },
     { id: 7, title: 'Tienda en línea de productividad', icon: <ShoppingBag size={36} /> },
-    { id: 8, title: 'Vida, negocios e imagen y éxito', icon: <Compass size={36} /> },
+    { id: 8, title: 'Vida, negocios, imagen y éxito', icon: <Compass size={36} /> },
     { id: 9, title: 'Fundación Únete a la causa', icon: <HeartHandshake size={36} /> },
   ];
 

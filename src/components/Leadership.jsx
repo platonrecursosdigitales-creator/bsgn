@@ -19,7 +19,7 @@ const Leadership = () => {
             <div className="leadership-quote-box">
               <span className="quote-mark">«</span>
               <p className="leadership-quote">
-                La vida es un juego de percepción, sueño y pasión, para ganar hay que aprender a jugar
+                La vida es un juego de percepción, sueño y pasión; para ganar hay que aprender a jugar.
               </p>
               <span className="quote-mark right">»</span>
             </div>

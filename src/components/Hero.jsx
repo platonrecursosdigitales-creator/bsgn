@@ -11,7 +11,7 @@ const Hero = () => {
           A TRAVÉS DE EXPERIENCIAS DE ALTO IMPACTO.
         </h1>
         <p className="hero-subtitle">
-          "EL ÉXITO DE UNA MARCA SE MIDE EN LAS EXPERIENCIA QUE GENERA"
+          "EL ÉXITO DE UNA MARCA SE MIDE EN LA EXPERIENCIA QUE GENERA"
         </p>
       </div>
     </section>
