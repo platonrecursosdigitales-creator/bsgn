@@ -1,77 +1,88 @@
 import React from 'react';
 import './Contact.css';
-import { MapPin, Phone, Mail, Globe } from 'lucide-react';
+import { Mail, Phone, Clock } from 'lucide-react';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
-const Contact = () => {
+function Contact() {
   return (
     <section id="contacto" className="section contact-section">
       <div className="container">
-        <h2 className="section-title">Contacto</h2>
-        
+        <div className="section-header text-center">
+          <h2 className="section-title">Contacto</h2>
+          <p className="section-subtitle">
+            Agenda una sesión de consultoría o comunícate con nosotros para más información sobre cómo podemos impulsar tus objetivos.
+          </p>
+        </div>
+
         <div className="contact-grid">
-          <div className="contact-info">
-            <h3 className="contact-subtitle">Ponte en contacto con nosotros</h3>
-            <p className="contact-desc">
-              Estamos listos para impulsar tu marca y llevar tu negocio al siguiente nivel. Escríbenos y un asesor se pondrá en contacto contigo.
-            </p>
+          <div className="contact-info glass-card">
+            <h3 className="contact-info-title">Ponte en contacto</h3>
             
-            <ul className="contact-details">
-              <li>
-                <Globe className="contact-icon" />
-                <div>
-                  <strong>México - USA</strong>
-                  <span>Servicios disponibles a todo el mundo</span>
-                </div>
-              </li>
-              <li>
-                <Phone className="contact-icon" />
-                <div>
-                  <strong>Teléfono</strong>
-                  <span><a href="tel:+529984408796">(+52) 998 440 87 96</a></span>
-                </div>
-              </li>
-              <li>
-                <Mail className="contact-icon" />
-                <div>
-                  <strong>Email</strong>
-                  <span><a href="mailto:success@bsgn.com.mx">success@bsgn.com.mx</a></span>
-                </div>
-              </li>
-              <li>
-                <MapPin className="contact-icon" />
-                <div>
-                  <strong>Dirección</strong>
-                  <span>Cancún, Quintana Roo</span>
-                </div>
-              </li>
-            </ul>
+            <div className="contact-item">
+              <Mail className="contact-icon" />
+              <div>
+                <h4>Correo Electrónico</h4>
+                <a href="mailto:success@bsgn.com.mx">success@bsgn.com.mx</a>
+              </div>
+            </div>
+
+            <div className="contact-item">
+              <Phone className="contact-icon" />
+              <div>
+                <h4>Teléfono / WhatsApp</h4>
+                <a href="tel:9984408796">998 440 8796</a>
+              </div>
+            </div>
+
+            <div className="contact-item">
+              <Clock className="contact-icon" />
+              <div>
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 9:00 a 19:00 hrs</p>
+              </div>
+            </div>
+
+            <div className="contact-social">
+              <h4>Síguenos</h4>
+              <div className="social-links">
+                <a href="#" className="social-link">
+                  <FaInstagram size={24} />
+                  <span>Bsgnconsulting</span>
+                </a>
+                <a href="#" className="social-link">
+                  <FaFacebook size={24} />
+                  <span>BSGN Consulting Group</span>
+                </a>
+              </div>
+            </div>
           </div>
-          
-          <div className="contact-form-wrapper">
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+
+          <div className="contact-form-wrapper glass-card">
+            <h3 className="contact-info-title">Envíanos un mensaje</h3>
+            <form className="contact-form">
               <div className="form-group">
-                <input type="text" id="nombre" placeholder="Nombre completo" required />
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <input type="email" id="email" placeholder="E-mail" required />
-                </div>
-                <div className="form-group">
-                  <input type="tel" id="telefono" placeholder="Teléfono" required />
-                </div>
+                <label htmlFor="name">Nombre completo</label>
+                <input type="text" id="name" placeholder="Tu nombre" required />
               </div>
               <div className="form-group">
-                <textarea id="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+                <label htmlFor="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="tu@correo.com" required />
               </div>
-              <button type="submit" className="btn btn-primary form-submit">
-                Enviar Mensaje
-              </button>
+              <div className="form-group">
+                <label htmlFor="phone">Teléfono (opcional)</label>
+                <input type="tel" id="phone" placeholder="Tu teléfono" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Mensaje</label>
+                <textarea id="message" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary w-100">Enviar Mensaje</button>
             </form>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Contact;

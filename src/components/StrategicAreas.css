@@ -1,167 +1,89 @@
-.strategic-areas {
-  background-color: var(--color-bg-dark);
-  background-image: radial-gradient(circle at center, rgba(48, 94, 141, 0.15) 0%, rgba(10, 15, 29, 1) 70%);
-  padding: 120px 0;
-  color: var(--color-white);
-  overflow: hidden;
+.mosaic-section {
+  background-color: var(--color-white);
+  padding: 80px 0;
 }
 
-.strategic-areas .section-title {
-  color: var(--color-white);
+.mosaic-main-title {
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
 }
 
-.mosaic-container {
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mosaic-item {
   position: relative;
-  min-height: 700px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 40px;
-}
-
-/* Center Element */
-.mosaic-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 10;
-  box-shadow: 0 0 40px rgba(99, 159, 248, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  transition: var(--transition);
-}
-
-.mosaic-center:hover {
-  box-shadow: 0 0 60px rgba(99, 159, 248, 0.5);
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-.center-content {
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.center-content h3 {
-  color: var(--color-white);
-  font-size: 2.5rem;
-  margin-bottom: 0;
-  letter-spacing: 2px;
+.mosaic-item:hover {
+  transform: translateY(-5px);
 }
 
-.center-content p {
-  color: var(--color-light-blue);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Nodes Base */
-.mosaic-nodes {
+.mosaic-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-.mosaic-node {
+.mosaic-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 220px;
-  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 30, 83, 0.65); /* blue overlay */
+  z-index: 2;
+  transition: background-color 0.3s ease;
 }
 
-.node-card {
-  background: rgba(10, 15, 29, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(99, 159, 248, 0.2);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  text-align: center;
-  transition: var(--transition);
-  cursor: pointer;
+.mosaic-item:hover .mosaic-overlay {
+  background-color: rgba(0, 30, 83, 0.45);
+}
+
+.mosaic-title {
   position: relative;
-}
-
-.node-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-light-blue);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(99, 159, 248, 0.2);
-}
-
-.node-icon {
-  color: var(--color-light-blue);
-  margin-bottom: 12px;
-  display: inline-flex;
-  padding: 12px;
-  background: rgba(48, 94, 141, 0.2);
-  border-radius: 50%;
-  transition: var(--transition);
-}
-
-.node-card:hover .node-icon {
-  background: var(--color-primary);
+  z-index: 3;
   color: var(--color-white);
-  transform: scale(1.1);
-}
-
-.node-title {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   line-height: 1.4;
+  padding: 0 1rem;
 }
 
-/* Radial Positioning (Desktop) */
-/* Formula used for placing 9 items in a circle around center */
-.node-1 { transform: translate(calc(280px * cos(270deg) - 50%), calc(280px * sin(270deg) - 50%)); }
-.node-2 { transform: translate(calc(280px * cos(310deg) - 50%), calc(280px * sin(310deg) - 50%)); }
-.node-3 { transform: translate(calc(280px * cos(350deg) - 50%), calc(280px * sin(350deg) - 50%)); }
-.node-4 { transform: translate(calc(280px * cos(30deg) - 50%), calc(280px * sin(30deg) - 50%)); }
-.node-5 { transform: translate(calc(280px * cos(70deg) - 50%), calc(280px * sin(70deg) - 50%)); }
-.node-6 { transform: translate(calc(280px * cos(110deg) - 50%), calc(280px * sin(110deg) - 50%)); }
-.node-7 { transform: translate(calc(280px * cos(150deg) - 50%), calc(280px * sin(150deg) - 50%)); }
-.node-8 { transform: translate(calc(280px * cos(190deg) - 50%), calc(280px * sin(190deg) - 50%)); }
-.node-9 { transform: translate(calc(280px * cos(230deg) - 50%), calc(280px * sin(230deg) - 50%)); }
-
-/* Drawing connecting lines (Simplified approach using pseudo-elements, though SVG would be more robust. We'll rely on visual proximity here, or we can use before elements on cards pointing to center) */
-
-/* Responsive Grid (Mobile) */
 @media (max-width: 992px) {
-  .mosaic-container {
-    min-height: auto;
-    flex-direction: column;
-    margin-top: 0;
+  .mosaic-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .mosaic-center {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-bottom: 40px;
+}
+
+@media (max-width: 576px) {
+  .mosaic-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
-  .mosaic-center:hover {
-    transform: scale(1.05);
-  }
-  
-  .mosaic-nodes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    position: relative;
-  }
-  
-  .mosaic-node {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none !important;
-    width: 100%;
+  .mosaic-item {
+    aspect-ratio: 16 / 9;
   }
 }

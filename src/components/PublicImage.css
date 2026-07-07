@@ -1,0 +1,71 @@
+.public-image-section {
+  background-color: var(--color-bg-light);
+}
+
+.pi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 4rem;
+}
+
+.pi-card {
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+  padding: 40px 30px;
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-md);
+  gap: 20px;
+}
+
+.pi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 30, 83, 0.1);
+}
+
+.pi-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 30, 83, 0.04);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.pi-card:hover .pi-icon-wrapper {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.pi-card-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.pi-cta {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .pi-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pi-card {
+    padding: 30px 20px;
+  }
+}

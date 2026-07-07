@@ -1,34 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
-
 :root {
   /* Brand Colors */
-  --color-primary: #00295B; /* Azul marino principal */
-  --color-secondary: #024779; /* Azul profundo secundario */
-  --color-tertiary: #0D5287; /* Azul corporativo intermedio */
-  --color-light-blue: #61A7E4; /* Azul claro franja/sección */
-  --color-accent: #ED1A8E; /* Magenta CTA/acento */
+  --color-primary: #001E53; /* Deep Blue / Navy */
+  --color-secondary: #012A5C;
+  --color-accent-blue: #305E8D;
+  --color-light-blue: #639FF8;
+  
+  --color-magenta: #D80073; /* Acentos controlados */
+  --color-orange: #FF914D; /* Acentos controlados */
   
   /* Neutral Colors */
-  --color-white: #FAF9FA; /* Blanco base */
-  --color-gray-light: #F0F0F0; /* Gris claro tarjetas */
-  --color-gray-text: #909FB0; /* Gris texto/apoyo */
-  --color-text-dark: #232628; /* Texto oscuro */
-  --color-bg-dark: #0A0F1D;
+  --color-white: #FFFFFF;
+  --color-bg-light: #F8F9FA;
+  --color-bg-dark: #0A0F1D; /* Premium Dark */
+  --color-bg-card: rgba(255, 255, 255, 0.05); /* Glass card */
+  
+  --color-text-dark: #1A1F2C;
   --color-text-light: #E2E8F0;
+  --color-text-muted: #8E9BAE;
   
   /* Typography */
-  --font-main: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
   
   /* Spacing & Layout */
   --max-width: 1200px;
-  --section-padding: 80px 0;
+  --section-padding: 100px 0;
   
   /* Effects */
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-  --shadow-glow: 0 0 20px rgba(237, 26, 142, 0.3);
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 30, 83, 0.15);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
@@ -45,7 +48,7 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: var(--font-body);
   background-color: var(--color-white);
   color: var(--color-text-dark);
   line-height: 1.6;
@@ -55,10 +58,15 @@ body {
 
 /* Typography Utilities */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   color: var(--color-primary);
   line-height: 1.2;
   font-weight: 600;
 }
+
+h1 { font-size: 3.5rem; font-weight: 700; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
 
 a {
   text-decoration: none;
@@ -82,22 +90,40 @@ ul {
   padding: var(--section-padding);
 }
 
+.section-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+}
+
+.section-dark h1, 
+.section-dark h2, 
+.section-dark h3, 
+.section-dark h4, 
+.section-dark h5, 
+.section-dark h6 {
+  color: var(--color-white);
+}
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: var(--color-gray-text);
+  color: var(--color-text-muted);
   text-align: center;
   max-width: 800px;
-  margin: -2rem auto 3rem;
-  font-weight: 300;
+  margin: -2rem auto 4rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Buttons */
@@ -106,8 +132,9 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 32px;
+  padding: 14px 32px;
   border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.5px;
@@ -118,13 +145,13 @@ ul {
 }
 
 .btn-primary {
-  background-color: var(--color-accent);
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background-color: #d1127a;
-  box-shadow: var(--shadow-glow);
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
@@ -137,6 +164,7 @@ ul {
 .btn-outline:hover {
   background-color: var(--color-white);
   color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
 .btn-outline-dark {
@@ -147,15 +175,60 @@ ul {
 
 .btn-outline-dark:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-white);
+}
+
+/* Cards & Glassmorphism */
+.glass-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
   .section-title {
     font-size: 2rem;
   }
   .section {
     padding: 60px 0;
   }
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Agenda Button Utilities */
+.btn-agenda-rosa {
+  display: inline-block;
+  background-color: var(--color-magenta);
+  color: var(--color-white);
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(216, 0, 115, 0.3);
+  letter-spacing: 1px;
+}
+
+.btn-agenda-rosa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(216, 0, 115, 0.5);
+  color: var(--color-white);
 }

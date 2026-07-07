@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import bsgnLogo from '../assets/bsgnlogo.webp';
+import bsgnLogo from '../assets/bsgnlogo.png';
 
-const Header = () => {
+function Header({ onOpenTrayectoria }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const [areasOpen, setAreasOpen] = useState(false);
+  const [nosotrosOpen, setNosotrosOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +19,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? 'scrolled glass-card' : ''}`}>
       <div className="container header-container">
         <div className="logo-container">
           <a href="#">
@@ -26,28 +29,53 @@ const Header = () => {
         
         <nav className={`main-nav ${mobileMenuOpen ? 'open' : ''}`}>
           <ul>
-            <li><a href="#inicio" onClick={() => setMobileMenuOpen(false)}>Inicio</a></li>
-            <li>
-              <a href="#areas" onClick={() => setMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                Servicios <ChevronDown size={16} />
+            <li><a href="#" onClick={() => setMobileMenuOpen(false)}>Inicio</a></li>
+            <li><a href="#areas" onClick={() => setMobileMenuOpen(false)}>Servicios</a></li>
+
+            <li className="has-dropdown" onMouseEnter={() => setNosotrosOpen(true)} onMouseLeave={() => setNosotrosOpen(false)}>
+              <a href="#nosotros" className="dropdown-toggle" onClick={(e) => { if(window.innerWidth <= 992) { e.preventDefault(); setNosotrosOpen(!nosotrosOpen); } }}>
+                Nosotros <ChevronDown size={16} className={`dropdown-icon ${nosotrosOpen ? 'rotate' : ''}`} />
               </a>
+              <ul className={`dropdown-menu ${nosotrosOpen ? 'show' : ''}`}>
+                <li><a href="#filosofia" onClick={() => setMobileMenuOpen(false)}>Filosofía</a></li>
+                <li><a href="#dyrcharaf" onClick={() => setMobileMenuOpen(false)}>Dyr Charaf</a></li>
+                <li>
+                  <a href="#trayectoria" onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    if (onOpenTrayectoria) onOpenTrayectoria();
+                  }}>
+                    Trayectoria
+                  </a>
+                </li>
+                <li><a href="#filosofia" onClick={() => setMobileMenuOpen(false)}>Valores</a></li>
+              </ul>
             </li>
-            <li><a href="#webinar" onClick={() => setMobileMenuOpen(false)}>Webinar</a></li>
-            <li><a href="#nosotros" onClick={() => setMobileMenuOpen(false)}>Nosotros</a></li>
-            <li><a href="#acerca-de" onClick={() => setMobileMenuOpen(false)}>Acerca de</a></li>
+
             <li><a href="#contacto" onClick={() => setMobileMenuOpen(false)}>Contacto</a></li>
           </ul>
+          
+          <div className="header-cta-mobile">
+            <a href="#contacto" className="btn btn-primary btn-sm" onClick={() => setMobileMenuOpen(false)}>
+              Agenda consultoría
+            </a>
+          </div>
         </nav>
 
-        <button 
-          className="mobile-menu-btn" 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="header-actions">
+          <a href="#contacto" className="btn btn-primary btn-sm desktop-only">
+            Agenda consultoría
+          </a>
+          <button 
+            className="mobile-menu-btn" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
     </header>
   );
-};
+}
 
 export default Header;

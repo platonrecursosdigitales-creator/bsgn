@@ -1,28 +1,29 @@
 import React from 'react';
 import './Footer.css';
-import bsgnLogo from '../assets/bsgnlogo.webp';
+import bsgnLogo from '../assets/bsgnlogo.png';
 
-const Footer = () => {
+function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-content">
-          <div className="footer-logo">
-            <img src={bsgnLogo} alt="BSGN Consulting Group" className="site-logo" />
-          </div>
-          <div className="footer-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#areas">Servicios</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
+        <div className="footer-content text-center">
+          <img src={bsgnLogo} alt="BSGN Consulting Group" className="footer-logo" />
+          <p className="footer-phrase">"We believe in global networks"</p>
+          <div className="footer-contact-info">
+            <p>success@bsgn.com.mx</p>
+            <p>998 440 8796</p>
           </div>
         </div>
+        
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} BSGN Consulting Group. Todos los derechos reservados.</p>
+          <p className="copyright">&copy; {currentYear} BSGN Consulting Group. Todos los derechos reservados.</p>
+          <a href="#" className="privacy-link">Aviso de Privacidad</a>
         </div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

@@ -1,0 +1,88 @@
+.philosophy-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-section::after {
+  content: 'BSGN';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25vw;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.02);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.manifesto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.manifesto-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.manifesto-item:hover {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+.manifesto-bullet {
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-light-blue);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.manifesto-item:hover .manifesto-bullet {
+  background-color: var(--color-magenta);
+  width: 60px;
+}
+
+.manifesto-text {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.manifesto-item:nth-child(3) .manifesto-text {
+  color: var(--color-light-blue);
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .manifesto-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .manifesto-text {
+    font-size: 1.5rem;
+  }
+  .manifesto-item {
+    gap: 15px;
+  }
+  .manifesto-bullet {
+    width: 20px;
+  }
+  .manifesto-item:hover .manifesto-bullet {
+    width: 30px;
+  }
+}

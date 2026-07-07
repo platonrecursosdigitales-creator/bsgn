@@ -1,0 +1,110 @@
+.social-cause-section {
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+  background-image: radial-gradient(circle at right bottom, rgba(216, 0, 115, 0.1) 0%, rgba(10, 15, 29, 1) 50%);
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.social-title-area {
+  flex: 1;
+}
+
+.social-title-area .section-title {
+  text-align: left;
+  margin-bottom: 10px;
+  color: var(--color-white);
+}
+
+.social-slogan {
+  font-family: var(--font-body);
+  color: var(--color-magenta);
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.social-desc {
+  flex: 1;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.social-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.ss-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.ss-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.ss-icon {
+  color: var(--color-light-blue);
+  margin-bottom: 20px;
+}
+
+.ss-card h4 {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.social-projects {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+}
+
+.projects-title {
+  color: var(--color-white);
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-pill {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-light);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 992px) {
+  .social-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-title-area .section-title {
+    text-align: center;
+  }
+  .social-services {
+    grid-template-columns: 1fr;
+  }
+}
