@@ -1,0 +1,298 @@
+.bespoke-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bespoke-modal-content {
+  background-color: #FDFBF7;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.bespoke-modal-close {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  background: #ffffff;
+  border: 1px solid rgba(35, 51, 71, 0.1);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #233347;
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.bespoke-modal-close:hover {
+  transform: scale(1.1);
+  color: #C8A97E;
+}
+
+.bespoke-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bespoke-card {
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.card-cream {
+  background-color: #FDFBF7;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(200, 169, 126, 0.1);
+}
+
+.card-dark {
+  background-color: #213247;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-image {
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+}
+
+.card-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bespoke-manifiesto-text {
+  font-size: 1.4rem;
+  color: #233347;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.bespoke-gold-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #C8A97E, transparent);
+  margin-top: 20px;
+  position: relative;
+}
+
+.bespoke-gold-line::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, transparent 40%, #FDFBF7 41%);
+  /* A simple wave effect trick or just a curve */
+}
+
+.bespoke-gold-line-small {
+  height: 1px;
+  width: 50px;
+  background-color: #C8A97E;
+  margin: 15px auto;
+}
+
+.bespoke-quote-text {
+  font-size: 1.8rem;
+  color: #FDFBF7;
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.bespoke-card-bottom {
+  background: linear-gradient(to top, rgba(253,251,247,0.95) 0%, rgba(253,251,247,0.7) 60%, transparent 100%);
+  width: 100%;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.bespoke-card-bottom-light {
+  background: rgba(253,251,247,0.9);
+  padding: 30px 20px;
+}
+
+.bespoke-location {
+  font-size: 1.4rem;
+  color: #233347;
+  margin: 0 0 5px;
+}
+
+.bespoke-subtitle {
+  font-size: 0.9rem;
+  color: #C8A97E;
+  font-style: italic;
+  margin: 0;
+}
+
+.bespoke-interior-text {
+  font-size: 1.2rem;
+  color: #233347;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.bespoke-icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #C8A97E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bespoke-gold-icon {
+  color: #C8A97E;
+}
+
+.bespoke-slogan-text {
+  font-size: 1.2rem;
+  color: #233347;
+  line-height: 1.4;
+}
+
+.bespoke-main-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 1px solid #C8A97E;
+  padding: 10px;
+}
+
+.bespoke-brand-name {
+  font-size: 2rem;
+  color: #233347;
+  letter-spacing: 2px;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+
+.bespoke-brand-desc {
+  font-size: 0.8rem;
+  color: #233347;
+  letter-spacing: 1.5px;
+  margin: 0 0 15px;
+}
+
+.bespoke-brand-tagline {
+  font-size: 0.7rem;
+  color: #C8A97E;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bespoke-process-title {
+  font-size: 1.2rem;
+  color: #233347;
+  margin-bottom: 30px;
+}
+
+.bespoke-process-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.process-step span {
+  font-size: 0.8rem;
+  color: #233347;
+}
+
+.bespoke-cta-title {
+  font-size: 1.6rem;
+  color: #233347;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.bespoke-cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #233347;
+  color: #FDFBF7;
+  text-decoration: none;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.bespoke-cta-btn:hover {
+  background-color: #C8A97E;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .bespoke-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bespoke-grid {
+    grid-template-columns: 1fr;
+  }
+  .bespoke-modal-content {
+    padding: 80px 20px 40px;
+  }
+  .bespoke-modal-close {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}

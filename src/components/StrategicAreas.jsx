@@ -10,7 +10,7 @@ import area7 from '../assets/area7.png';
 import area8 from '../assets/area8.png';
 import uneteImg from '../assets/unete.png';
 
-function StrategicAreas({ onOpenUneteCausa, onOpenStartups, onOpenDesarrollo, onOpenService }) {
+function StrategicAreas({ onOpenUneteCausa, onOpenStartups, onOpenDesarrollo, onOpenBespoke, onOpenService }) {
   const areas = [
     { id: 1, title: 'Consultoría en\nimagen pública', img: area1 },
     { id: 2, title: 'Comunicación\nestratégica', img: area2 },
@@ -42,11 +42,13 @@ function StrategicAreas({ onOpenUneteCausa, onOpenStartups, onOpenDesarrollo, on
                   onOpenStartups();
                 } else if (area.id === 4 && onOpenDesarrollo) {
                   onOpenDesarrollo();
+                } else if (area.id === 7 && onOpenBespoke) {
+                  onOpenBespoke();
                 } else if ((area.id === 1 || area.id === 2 || area.id === 3) && onOpenService) {
                   onOpenService(area.id);
                 }
               }}
-              style={(area.id === 9 || area.id === 8 || area.id === 5 || area.id === 4 || area.id === 1 || area.id === 2 || area.id === 3) ? { cursor: 'pointer' } : {}}
+              style={(area.id === 9 || area.id === 8 || area.id === 7 || area.id === 5 || area.id === 4 || area.id === 1 || area.id === 2 || area.id === 3) ? { cursor: 'pointer' } : {}}
             >
               <img src={area.img} alt={area.title.replace('\n', ' ')} className="mosaic-img" />
               <div className="mosaic-overlay"></div>

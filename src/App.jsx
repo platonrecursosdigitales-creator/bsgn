@@ -13,12 +13,14 @@ import UneteCausa from './components/UneteCausa';
 import Startups from './components/Startups';
 import DesarrolloPersonal from './components/DesarrolloPersonal';
 import ServiceModal from './components/ServiceModal';
+import BespokeModal from './components/BespokeModal';
 
 function App() {
   const [isTrayectoriaOpen, setIsTrayectoriaOpen] = useState(false);
   const [isUneteOpen, setIsUneteOpen] = useState(false);
   const [isStartupsOpen, setIsStartupsOpen] = useState(false);
   const [isDesarrolloOpen, setIsDesarrolloOpen] = useState(false);
+  const [isBespokeOpen, setIsBespokeOpen] = useState(false);
   const [activeServiceId, setActiveServiceId] = useState(null);
 
   return (
@@ -31,6 +33,7 @@ function App() {
           onOpenUneteCausa={() => setIsUneteOpen(true)} 
           onOpenStartups={() => setIsStartupsOpen(true)}
           onOpenDesarrollo={() => setIsDesarrolloOpen(true)}
+          onOpenBespoke={() => setIsBespokeOpen(true)}
           onOpenService={(id) => setActiveServiceId(id)}
         />
         <Philosophy />
@@ -42,6 +45,7 @@ function App() {
       <UneteCausa isOpen={isUneteOpen} onClose={() => setIsUneteOpen(false)} />
       <Startups isOpen={isStartupsOpen} onClose={() => setIsStartupsOpen(false)} />
       <DesarrolloPersonal isOpen={isDesarrolloOpen} onClose={() => setIsDesarrolloOpen(false)} />
+      <BespokeModal isOpen={isBespokeOpen} onClose={() => setIsBespokeOpen(false)} />
       <ServiceModal isOpen={activeServiceId !== null} onClose={() => setActiveServiceId(null)} serviceId={activeServiceId} />
     </div>
   );
