@@ -1,5 +1,6 @@
 import React from 'react';
 import './Services.css';
+import bespokeLogo from '../assets/bespoke.jpeg';
 import { 
   UserCheck, 
   MessageSquareShare, 
@@ -9,7 +10,8 @@ import {
   Star, 
   ShoppingBag, 
   Compass, 
-  HeartHandshake 
+  HeartHandshake,
+  Plane
 } from 'lucide-react';
 
 const Services = () => {
@@ -20,7 +22,7 @@ const Services = () => {
     { id: 4, title: 'Desarrollo personal y profesional', icon: <Target size={36} /> },
     { id: 5, title: 'Startups - Emprende tu negocio', icon: <Rocket size={36} /> },
     { id: 6, title: 'High-End Events & Experiences', icon: <Star size={36} /> },
-    { id: 7, title: 'Tienda en línea de productividad', icon: <ShoppingBag size={36} /> },
+    { id: 7, title: 'Bespoke Travel Atelier & Concierge', icon: <img src={bespokeLogo} alt="Bespoke Travel" style={{ width: '48px', height: 'auto', maxHeight: '48px', objectFit: 'contain' }} /> },
     { id: 8, title: 'Vida, negocios e imagen y éxito', icon: <Compass size={36} /> },
     { id: 9, title: 'Fundación Únete a la causa', icon: <HeartHandshake size={36} /> },
   ];
