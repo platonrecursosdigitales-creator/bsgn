@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Headphones, PenTool, Gem, Plane } from 'lucide-react';
+import { X, Headphones, PenTool, Gem, Plane, MapPin, Compass, Star } from 'lucide-react';
 import './BespokeModal.css';
 
 import bespokeLogo from '../assets/bespoke.jpeg';
@@ -24,8 +24,11 @@ function BespokeModal({ isOpen, onClose }) {
           </div>
 
           {/* Card 2: Destino Paris */}
-          <div className="bespoke-card card-image" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=600)' }}>
-            <div className="bespoke-card-bottom">
+          <div className="bespoke-card card-cream card-center">
+            <div className="bespoke-icon-circle">
+              <MapPin size={32} className="bespoke-gold-icon" />
+            </div>
+            <div className="bespoke-card-bottom-text">
               <p className="bespoke-location">Paris, France</p>
               <p className="bespoke-subtitle">Curated beyond the obvious</p>
             </div>
@@ -57,8 +60,11 @@ function BespokeModal({ isOpen, onClose }) {
           </div>
 
           {/* Card 6: Interior */}
-          <div className="bespoke-card card-image" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=600)' }}>
-            <div className="bespoke-card-bottom bespoke-card-bottom-light">
+          <div className="bespoke-card card-cream card-center">
+            <div className="bespoke-icon-circle">
+              <Star size={32} className="bespoke-gold-icon" />
+            </div>
+            <div className="bespoke-card-bottom-text">
               <p className="bespoke-interior-text">Viajar es un arte.<br/>Nosotros lo trabajamos como un atelier.</p>
               <div className="bespoke-gold-line-small"></div>
             </div>
@@ -89,8 +95,11 @@ function BespokeModal({ isOpen, onClose }) {
           </div>
 
           {/* Card 8: Destino Lake Como */}
-          <div className="bespoke-card card-image" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1552560880-2482c9f80df5?auto=format&fit=crop&q=80&w=600)' }}>
-            <div className="bespoke-card-bottom">
+          <div className="bespoke-card card-cream card-center">
+            <div className="bespoke-icon-circle">
+              <Compass size={32} className="bespoke-gold-icon" />
+            </div>
+            <div className="bespoke-card-bottom-text">
               <p className="bespoke-location">Lake Como, Italy</p>
               <p className="bespoke-subtitle">Tailored beyond expectations</p>
             </div>
