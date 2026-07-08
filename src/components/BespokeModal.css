@@ -60,7 +60,7 @@
 }
 
 .bespoke-card {
-  aspect-ratio: 1 / 1;
+  min-height: 320px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -133,11 +133,11 @@
 }
 
 .bespoke-quote-text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #FDFBF7;
   line-height: 1.4;
   font-style: italic;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .bespoke-card-bottom {
@@ -166,7 +166,7 @@
 }
 
 .bespoke-interior-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #233347;
   line-height: 1.4;
   margin: 0;
@@ -226,9 +226,9 @@
 }
 
 .bespoke-process-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #233347;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .bespoke-process-icons {
@@ -251,10 +251,10 @@
 }
 
 .bespoke-cta-title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #233347;
   line-height: 1.4;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .bespoke-cta-btn {

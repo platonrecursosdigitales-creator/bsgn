@@ -6,7 +6,7 @@ import area3 from '../assets/new_area_3_business.jpg';
 import area4 from '../assets/new_area_3.jpg';
 import area5 from '../assets/new_area_5.jpg';
 import area6 from '../assets/new_area_4.jpg';
-import area7 from '../assets/area7.png';
+import bespokeImg from '../assets/bespoke.jpeg';
 import area8 from '../assets/area8.png';
 import uneteImg from '../assets/unete.png';
 
@@ -18,7 +18,7 @@ function StrategicAreas({ onOpenUneteCausa, onOpenStartups, onOpenDesarrollo, on
     { id: 4, title: 'Desarrollo\npersonal y\nprofesional', img: area4 },
     { id: 5, title: 'Startups -\nEmprende tu\npropio negocio', img: area5 },
     { id: 6, title: 'High-end Events\n& experiences', img: area6 },
-    { id: 7, title: 'Bespoke Travel\natelier &\nConcierge', img: area7 },
+    { id: 7, title: 'Bespoke Travel\natelier &\nConcierge', img: bespokeImg },
     { id: 8, title: 'Vida Negocios\nImagen y Éxito', img: area8 },
     { id: 9, title: 'Fundación\nÚnete a la causa', img: uneteImg },
   ];

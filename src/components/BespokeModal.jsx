@@ -53,11 +53,7 @@ function BespokeModal({ isOpen, onClose }) {
           </div>
 
           {/* Card 5: Logo */}
-          <div className="bespoke-card card-cream card-center">
-            <img src={bespokeLogo} alt="Bespoke Travel Atelier" className="bespoke-main-logo" />
-            <h2 className="bespoke-brand-name">BESPOKE</h2>
-            <p className="bespoke-brand-desc">TRAVEL ATELIER & CONCIERGE</p>
-            <p className="bespoke-brand-tagline">DEVOTED WORLD CRAFTERS</p>
+          <div className="bespoke-card card-image" style={{ backgroundImage: `url(${bespokeLogo})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundColor: '#FDFBF7' }}>
           </div>
 
           {/* Card 6: Interior */}
