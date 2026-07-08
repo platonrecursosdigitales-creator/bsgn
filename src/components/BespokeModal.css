@@ -105,21 +105,9 @@
 
 .bespoke-gold-line {
   height: 1px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, #C8A97E, transparent);
-  margin-top: 20px;
-  position: relative;
-}
-
-.bespoke-gold-line::after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: radial-gradient(ellipse at center, transparent 40%, #FDFBF7 41%);
-  /* A simple wave effect trick or just a curve */
+  width: 80%;
+  margin: 25px auto 0;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 126, 0.6), transparent);
 }
 
 .bespoke-gold-line-small {
