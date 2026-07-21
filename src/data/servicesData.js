@@ -19,7 +19,7 @@ export const servicesData = {
     id: 2,
     title: "Consultoría en comunicación estratégica",
     quote: "“La comunicación es un espiral que inicia en el centro y se refleja en el exterior”",
-    shortDescription: "Nos especializamos en potenciar y destacar las competencias y habilidades de equipos de trabajo optimizando los procesos y desarrollo de canales de comunicación y desarrollo de mensajes de alto impacto que genere un flujo de comunicación efectiva que se refleje en el logro de tus objetivos corporativos generando alto impacto en el mercado.",
+    shortDescription: "Nos especializamos en potenciar y destacar las competencias y habilidades de equipos de trabajo y marcas, optimizando los procesos y desarrollo de canales de comunicación y desarrollo de mensajes de alto impacto que genere un flujo de comunicación efectiva que se refleje en el logro de tus objetivos corporativos generando alto impacto en el mercado.",
     includes: [
       { text: "Consultoría integral en comunicación interna y externa", icon: MessageSquare },
       { text: "Desarrollo creativo y gráfico", icon: PenTool },

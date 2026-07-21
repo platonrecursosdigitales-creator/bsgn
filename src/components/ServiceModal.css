@@ -148,8 +148,8 @@
   z-index: 20;
 }
 
-.svc-orbital-node.accent-blue { border-top: 4px solid var(--color-light-blue); }
-.svc-orbital-node.accent-orange { border-top: 4px solid var(--color-orange); }
+.svc-orbital-node.accent-blue { border-top: 4px solid var(--color-accent-blue); }
+.svc-orbital-node.accent-orange { border-top: 4px solid var(--color-accent-blue); }
 .svc-orbital-node.accent-magenta { border-top: 4px solid var(--color-magenta); }
 
 .svc-node-icon {
@@ -282,8 +282,8 @@
     box-shadow: var(--shadow-sm);
   }
 
-  .svc-mobile-card.accent-blue { border-left: 4px solid var(--color-light-blue); }
-  .svc-mobile-card.accent-orange { border-left: 4px solid var(--color-orange); }
+  .svc-mobile-card.accent-blue { border-left: 4px solid var(--color-accent-blue); }
+  .svc-mobile-card.accent-orange { border-left: 4px solid var(--color-accent-blue); }
   .svc-mobile-card.accent-magenta { border-left: 4px solid var(--color-magenta); }
 
   .svc-mobile-card-header {
