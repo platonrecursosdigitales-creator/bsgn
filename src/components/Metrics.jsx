@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Metrics.css';
 import heroImg from '../assets/skyscraper.png';
-import AsesoriaModal from './AsesoriaModal';
 
 function Metrics() {
-  const [isAsesoriaModalOpen, setIsAsesoriaModalOpen] = useState(false);
   return (
     <section className="skyscraper-section" id="nosotros">
       <div className="container skyscraper-content">
@@ -19,19 +17,16 @@ function Metrics() {
           <img src={heroImg} alt="Edificio corporativo" className="skyscraper-circular-image" />
         </div>
         <div className="skyscraper-cta-container">
-          <button 
-            onClick={() => setIsAsesoriaModalOpen(true)}
+          <a 
+            href="https://calendly.com/dyrcharaf/bienvenid-a-bsgn-consulting-group"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-agenda-rosa"
           >
             Agenda una consultoría gratuita
-          </button>
+          </a>
         </div>
       </div>
-      
-      <AsesoriaModal 
-        isOpen={isAsesoriaModalOpen} 
-        onClose={() => setIsAsesoriaModalOpen(false)} 
-      />
     </section>
   );
 }
