@@ -80,7 +80,7 @@ export const servicesData = {
     title: "Consultoría en desarrollo de negocios",
     shortDescription: "Colaboramos con empresas y empresarios de toda índole y sector en el desarrollo de estrategias y procesos corporativos generadores de éxito empresarial.",
     includes: [
-      { text: "Startup - emprende tu propio negocio", icon: Rocket },
+      { text: "Startup", icon: Rocket },
       { text: "Consultoría y gestión empresarial", icon: LineChart },
       { text: "Manejo de crisis", icon: ShieldAlert },
       { text: "Representaciones corporativas y networking", icon: Network }

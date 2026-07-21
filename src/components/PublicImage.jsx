@@ -35,7 +35,12 @@ function PublicImage() {
         </div>
         
         <div className="pi-cta text-center">
-          <a href="#contacto" className="btn btn-primary">
+          <a 
+            href="https://calendly.com/dyrcharaf/vida-negocios-imagen-y-exito-con-dyr-charaf-askdyr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-primary"
+          >
             Agenda sesión de consultoría
           </a>
         </div>

@@ -56,14 +56,25 @@ function Header({ onOpenTrayectoria }) {
           </ul>
           
           <div className="header-cta-mobile">
-            <a href="#contacto" className="btn btn-primary btn-sm" onClick={() => setMobileMenuOpen(false)}>
+            <a 
+              href="https://calendly.com/dyrcharaf/vida-negocios-imagen-y-exito-con-dyr-charaf-askdyr" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary btn-sm" 
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Agenda consultoría
             </a>
           </div>
         </nav>
 
         <div className="header-actions">
-          <a href="#contacto" className="btn btn-primary btn-sm desktop-only">
+          <a 
+            href="https://calendly.com/dyrcharaf/vida-negocios-imagen-y-exito-con-dyr-charaf-askdyr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-primary btn-sm desktop-only"
+          >
             Agenda consultoría
           </a>
           <button 

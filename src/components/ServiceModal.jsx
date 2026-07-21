@@ -102,12 +102,15 @@ function ServiceModal({ isOpen, onClose, serviceId }) {
         
         {/* Footer CTA */}
         <div className="svc-footer">
-          <button className={`svc-btn-cta ${accentClass}`} onClick={() => {
-            window.location.href = '#contacto';
-            onClose();
-          }}>
+          <a 
+            href={`https://wa.me/529984408796?text=${encodeURIComponent(`Hola, me interesa solicitar una cotización sobre: ${service.title}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`svc-btn-cta ${accentClass}`}
+            style={{ display: 'inline-block', textDecoration: 'none' }}
+          >
             Solicitar Cotización
-          </button>
+          </a>
         </div>
 
       </div>
