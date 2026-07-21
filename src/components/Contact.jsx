@@ -1,7 +1,6 @@
 import React from 'react';
 import './Contact.css';
 import { Mail, Phone, Clock } from 'lucide-react';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
 function Contact() {
   return (
@@ -39,20 +38,6 @@ function Contact() {
               <div>
                 <h4>Horario de Atención</h4>
                 <p>Lunes a Viernes: 9:00 a 19:00 hrs</p>
-              </div>
-            </div>
-
-            <div className="contact-social">
-              <h4>Síguenos</h4>
-              <div className="social-links">
-                <a href="#" className="social-link">
-                  <FaInstagram size={24} />
-                  <span>Bsgnconsulting</span>
-                </a>
-                <a href="#" className="social-link">
-                  <FaFacebook size={24} />
-                  <span>BSGN Consulting Group</span>
-                </a>
               </div>
             </div>
           </div>
